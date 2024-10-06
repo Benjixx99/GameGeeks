@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+
+    <title>Contact</title>
+</head>
+
+<body>
+    <!-- Header -->
+    {% include "header.html" %}
+
+    <main class="contact_form">
+        <form>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" placeholder="Your name.."><br>
+
+            <label for="lname">E-mail</label><br>
+            <input type="email" id="lname" placeholder="Your e-mail"><br>
+
+
+            <label for="message">Message</label><br>
+            <textarea id="message" placeholder="Write your message.." style="height:100px"></textarea><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+    <!-- Footer -->
+    {% include "footer.html" %}
+</body>
+
+</html>

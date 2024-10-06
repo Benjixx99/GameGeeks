@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    <title>News</title>
+</head>
+<body>
+    <!-- Header -->
+    {% include "header.html" %}
+
+    <main>   
+        {% block pageContent %}
+            {% block NewsBlock %}
+                {% for news in allNews %}
+                    <h3><a href="{% url 'news_detail' news.URLName %} ">{{ news.Title }}</a></h3>
+                    <small>
+                        {{ news.CDate }} 
+                    </small>
+                
+                <p>{{ news.ShortText }}</p><br>
+                {% endfor %}
+            {% endblock NewsBlock %}
+        {% endblock pageContent %}
+    </main>
+
+    <!-- Footer -->
+    {% include "footer.html" %}
+</body>
+</html>

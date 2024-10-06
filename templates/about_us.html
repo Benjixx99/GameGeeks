@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    <title>About Us</title>
+</head>
+<body>
+    <!-- Header -->
+    {% include "header.html" %}
+
+    <p>
+        On this site you can see all the people that write and work on this great site
+    </p>
+
+    <main>
+        {% block pageContent %}
+            {% block aboutUsBlock %}
+                {% for aboutUs in allAboutUs %}
+                    <h3>{{ aboutUs.Name }}</h3>
+                    <small>
+                        {{ aboutUs.CDate }} 
+                    </small>
+                
+                <p>{{ aboutUs.Text }}</p><br>
+                {% endfor %}
+            {% endblock aboutUsBlock %}
+        {% endblock pageContent %}
+    </main>
+
+    <!-- Footer -->
+    {% include "footer.html" %}
+</body>
+</html>

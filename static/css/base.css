@@ -1,0 +1,77 @@
+
+/* General section */
+body {
+    background-color: lightgray;
+    color: blue;
+}
+
+ul  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+/* General section END */
+
+
+/* Header and navigation section */
+.navigation_ul {
+    color: aquamarine;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navigation_ul li {
+    float: left;
+}
+
+.navigation_ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+.navigation_ul li a:hover {
+    background-color: #111;
+}
+  
+.navigation_ul a {
+    display: block;
+    padding: 8px;
+    background-color: #3337c8b3;
+}
+/* Header and navigation section END */
+
+
+/* Footer section */
+.footer  {
+    background-color: #222;
+    color: rgb(6, 161, 245);
+    margin-top: 20px;
+}
+
+.footer_li_header {
+    color: rgb(6, 161, 245);
+}
+
+.footer_ul {
+    /* background-color: coral; */
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+
+}
+
+.copyright {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+/* Footer section END */
