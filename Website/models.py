@@ -24,7 +24,8 @@ class AboutUs(models.Model):
     UDate = models.DateField(auto_now=True)
     Name = models.CharField(max_length=50)
     Text = models.TextField()
-    ImagePath = models.CharField(max_length=120)
+    ImagePath = models.CharField(max_length=120, default="no-image.jpg")
+    AltImageText = models.CharField(max_length=50, default="")
 
     class Meta:
         verbose_name_plural = "AboutUs"

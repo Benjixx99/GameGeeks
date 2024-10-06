@@ -17,7 +17,7 @@ def newsDetail(request, URLName):
     return render(request, "news_detail.html", context)
 
 def aboutUs(request):
-    allAboutUs = AboutUs.objects.all().order_by("-CDate")
+    allAboutUs = AboutUs.objects.all().order_by("CDate")
     context = { "allAboutUs" : allAboutUs }
     return render(request, "about_us.html", context)
 

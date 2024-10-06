@@ -5,42 +5,46 @@ body {
     color: blue;
 }
 
-ul  {
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 a {
     text-decoration: none;
     color: white;
-}
+} 
 /* General section END */
 
 
 /* Header and navigation section */
-.navigation_ul {
+.navigationList {
     color: aquamarine;
     overflow: hidden;
     background-color: #333;
 }
 
-.navigation_ul li {
+.navigationList li {
     float: left;
 }
 
-.navigation_ul li a {
+.navigationList li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
 }
 
-.navigation_ul li a:hover {
+.navigationList li a:hover {
     background-color: #111;
 }
   
-.navigation_ul a {
+.navigationList a {
     display: block;
     padding: 8px;
     background-color: #3337c8b3;
@@ -49,29 +53,86 @@ a {
 
 
 /* Footer section */
-.footer  {
-    background-color: #222;
+.footer {
+    background-color: #24262b; /*#222;*/
+    max-width: 1170px;
+	margin: auto;
+    padding: 50px 0;
     color: rgb(6, 161, 245);
     margin-top: 20px;
 }
 
-.footer_li_header {
-    color: rgb(6, 161, 245);
+.row {
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.footer_ul {
-    /* background-color: coral; */
+.footerColumn {
     color: white;
     display: inline-block;
     vertical-align: top;
     margin-left: 20px;
+    padding: 0 15px;
+    width: 25%;
+}
 
+.footerColumn h3 {
+	font-size: 18px;
+	color: white;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footerColumn h3::before {
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+    /* #e91e63; */
+	background-color: rgb(6, 161, 245); 
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+.footerColumn ul li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.footerColumn ul li a {
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footerColumn ul li a:hover {
+	color: #ffffff;
+	padding-left: 8px;
 }
 
 .copyright {
     text-align: center;
+    padding-top: 25px;
     padding-bottom: 10px;
 }
 
-
+/*responsive*/
+@media(max-width: 767px){
+    .footerColumn {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width: 574px){
+    .footerColumn {
+        width: 100%;
+    }
+}
 /* Footer section END */

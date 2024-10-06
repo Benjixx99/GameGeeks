@@ -25,9 +25,11 @@
                     <h3>{{ aboutUs.Name }}</h3>
                     <small>
                         {{ aboutUs.CDate }} 
-                    </small>
-                
-                <p>{{ aboutUs.Text }}</p><br>
+                    </small><br><br>
+
+                <img src="{% static 'images' %}/aboutUs/{{ aboutUs.ImagePath }}" width="150" alt="alt-text">
+            
+                <p style="white-space: pre-line">{{ aboutUs.Text }}</p><br>
                 {% endfor %}
             {% endblock aboutUsBlock %}
         {% endblock pageContent %}

@@ -16,20 +16,22 @@
 <body>
     <!-- Header -->
     {% include "header.html" %}
-
+    
     <main class="contact_form">
-        <form>
-            <label for="name">Name</label><br>
-            <input type="text" id="name" placeholder="Your name.."><br>
+        <form class="form">
+            <div class="pageTitle title">Contact Us</div>
+            <dvi class="secondaryTitle title">We'd love to hear from you!</div>
+            {% comment %} <label for="name">Name</label><br> {% endcomment %}
+            <input type="text" class="text formEntry" placeholder="Name"><br>
 
-            <label for="lname">E-mail</label><br>
-            <input type="email" id="lname" placeholder="Your e-mail"><br>
+            {% comment %} <label for="lname">E-mail</label><br> {% endcomment %}
+            <input type="email" class="text formEntry" placeholder="Email"><br>
 
 
-            <label for="message">Message</label><br>
-            <textarea id="message" placeholder="Write your message.." style="height:100px"></textarea><br>
+            {% comment %} <label for="message">Message</label><br> {% endcomment %}
+            <textarea class="message formEntry" placeholder="Message" style="height:100px"></textarea><br>
 
-            <input type="submit" value="Submit">
+            <button class="submit formEntry" onclick="thanks()">Submit</button>
         </form>
     </main>
 
