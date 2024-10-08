@@ -3,6 +3,7 @@
 body {
     background-color: lightgray;
     color: blue;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 * {

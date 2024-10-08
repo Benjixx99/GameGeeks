@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
 
     <title>News</title>
 </head>
@@ -14,19 +15,22 @@
     <!-- Header -->
     {% include "header.html" %}
 
-    <main>   
-        {% block pageContent %}
-            {% block NewsBlock %}
-                {% for news in allNews %}
+    <!-- Main -->
+    <main class="main">   
+        <div class="mainContainer">
+            {% for news in allNews %}
+                <article class="mainItem">
                     <h3><a href="{% url 'news_detail' news.URLName %} ">{{ news.Title }}</a></h3>
                     <small>
-                        {{ news.CDate }} 
-                    </small>
-                
-                <p>{{ news.ShortText }}</p><br>
-                {% endfor %}
-            {% endblock NewsBlock %}
-        {% endblock pageContent %}
+                        {{ news.CDate }} {{ news.AuthorName }} 
+                    </small><br>
+                    
+                    <img src="{% static 'images' %}/news/{{ news.ImagePath }}" width="210" height="120" alt="alt-text">
+                    
+                    <p class="text">{{ news.ShortText }}</p><br>
+                </article>
+            {% endfor %}
+        </div>
     </main>
 
     <!-- Footer -->

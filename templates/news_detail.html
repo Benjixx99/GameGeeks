@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/news-detail.css' %}">
 
     <title>{{ news.Title }}</title>
 </head>
@@ -14,17 +15,18 @@
     <!-- Header -->
     {% include "header.html" %}
 
-    <main>   
-        {% block pageContent %}
-            {% block NewsBlock %}
-                <h3>{{ news.Title }}</h3>
-                <small>
-                    {{ news.CDate }} 
-                </small>
-                {% comment %} TODO: Add the image here! {% endcomment %}
-                <p>{{ news.Text }}</p><br>
-            {% endblock NewsBlock %}
-        {% endblock pageContent %}
+    <!-- Main -->
+    <main class="main">   
+        <article class="mainContainer">
+            <h3>{{ news.Title }}</h3>
+            <small>
+                {{ news.CDate }} {{ news.AuthorName }} 
+            </small><br>
+
+            <img src="{% static 'images' %}/news/{{ news.ImagePath }}" width="720" alt="alt-text">
+
+            <p class="text" style="white-space: pre-line">{{ news.Text }}</p><br>
+        </article>
     </main>
 
     <!-- Footer -->

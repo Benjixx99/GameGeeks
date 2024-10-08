@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about-us.css' %}">
 
     <title>About Us</title>
 </head>
@@ -14,25 +15,33 @@
     <!-- Header -->
     {% include "header.html" %}
 
-    <p>
-        On this site you can see all the people that write and work on this great site
-    </p>
+     <!-- Main -->
+    <main class="main">
+        {% comment %} TODO: Add the right image to the folder!!! {% endcomment %}
+        {% comment %} <img src="{% static 'images' %}/aboutUs/ " width="720" alt="About us picture"> {% endcomment %}
+        
+        <p>
+            On this site you can see all the people that write and work on this great site
+        </p>
 
-    <main>
-        {% block pageContent %}
-            {% block aboutUsBlock %}
-                {% for aboutUs in allAboutUs %}
-                    <h3>{{ aboutUs.Name }}</h3>
-                    <small>
-                        {{ aboutUs.CDate }} 
-                    </small><br><br>
+        {% for aboutUs in allAboutUs %}
+            <div class="mainContainer">
+                <h3>{{ aboutUs.Name }}</h3>
+                <small>
+                    {{ aboutUs.CDate }} 
+                </small><br><br>
+                
+                <div class="mainItem">
+                    <div class="imageLeft">
+                        <img src="{% static 'images' %}/aboutUs/{{ aboutUs.ImagePath }}" width="150" alt="alt-text">
+                    </div>
 
-                <img src="{% static 'images' %}/aboutUs/{{ aboutUs.ImagePath }}" width="150" alt="alt-text">
-            
-                <p style="white-space: pre-line">{{ aboutUs.Text }}</p><br>
-                {% endfor %}
-            {% endblock aboutUsBlock %}
-        {% endblock pageContent %}
+                    <div class="text">
+                        <p class="description" style="white-space: pre-line">{{ aboutUs.Text }}</p><br>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </main>
 
     <!-- Footer -->

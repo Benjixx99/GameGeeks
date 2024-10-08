@@ -1,0 +1,27 @@
+.main {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+
+    color: black;
+}
+
+.mainContainer {
+    padding-top: 10px;
+    background-color: aliceblue;
+}
+
+.mainContainer h3 {
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.mainContainer small {
+    padding-left: 10px;
+}
+
+.text {
+    padding-top: 10px;
+    padding-left: 10px;
+}
