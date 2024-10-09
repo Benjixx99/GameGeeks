@@ -14,12 +14,17 @@ def news(request):
 def newsDetail(request, URLName):
     news = News.objects.get(URLName=URLName)
     context = { "news" : news }
-    return render(request, "news_detail.html", context)
+    return render(request, "news-detail.html", context)
+
+def shop(request):
+    shopArticle = ShopArticle.objects.all().order_by("-CDate")
+    context = { "shopArticle" : shopArticle }
+    return render(request, "shop.html", context)
 
 def aboutUs(request):
     allAboutUs = AboutUs.objects.all().order_by("CDate")
     context = { "allAboutUs" : allAboutUs }
-    return render(request, "about_us.html", context)
+    return render(request, "about-us.html", context)
 
 def contact(request):
     return render(request, "contact.html")

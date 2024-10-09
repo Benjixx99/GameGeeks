@@ -1,0 +1,43 @@
+.main {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+
+    color: black;
+}
+
+.mainContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.mainItem {
+    order: 3;    
+    width: 210px;
+    margin-top: 20px;
+}
+
+.mainItem h3 {
+    height: 90px;
+}
+
+.mainItem h3 a {
+    color: black;
+}
+
+.mainItem small {
+    font-size: 15px;
+    color:rgb(18, 7, 68);
+}
+
+.name {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.price {
+    font-size: 14px;
+    font-weight: lighter;
+}

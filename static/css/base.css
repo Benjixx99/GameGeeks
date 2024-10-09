@@ -1,9 +1,9 @@
 
 /* General section */
 body {
-    background-color: lightgray;
+    background-color: rgb(246, 243, 239);
     color: blue;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 * {
@@ -25,7 +25,6 @@ a {
 
 /* Header and navigation section */
 .navigationList {
-    color: aquamarine;
     overflow: hidden;
     background-color: #333;
 }
