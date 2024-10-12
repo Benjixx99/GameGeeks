@@ -16,18 +16,23 @@
     {% include "header.html" %}
 
     <!-- Main -->
-    <main class="main">   
+    <main class="main">  
+        <h1>Game Geeks News</h1> 
+        <p>
+            On this page you can read about the latest news in the gaming industry, trands and releaes
+        </p>
         <div class="mainContainer">
-            {% for news in allNews %}
-                <article class="mainItem">
-                    <h3><a href="{% url 'news-detail' news.URLName %} ">{{ news.Title }}</a></h3>
-                    <small>
-                        {{ news.CDate }} {{ news.AuthorName }} 
-                    </small><br>
-                    
-                    <img src="{% static 'images' %}/news/{{ news.ImagePath }}" width="210" height="120" alt="alt-text">
-                    
-                    <p class="text">{{ news.ShortText }}</p><br>
+            {% for news in allNews %}   
+                <article class="mainItem">   
+                    <a href="{% url 'news-detail' news.URLName %}">               
+                        <img src="{% static 'images' %}/news/{{ news.ImagePath }}" width="210" height="120" alt="alt-text">
+                        <h3>{{ news.Title }}</h3>
+                        <small>
+                            {{ news.CDate }} {{ news.AuthorName }} 
+                        </small><br>
+
+                        <p class="text">{{ news.ShortText }}</p><br>
+                    </a>
                 </article>
             {% endfor %}
         </div>

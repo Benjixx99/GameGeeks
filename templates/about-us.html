@@ -17,9 +17,9 @@
 
      <!-- Main -->
     <main class="main">
-        {% comment %} TODO: Add the right image to the folder!!! {% endcomment %}
-        {% comment %} <img src="{% static 'images' %}/aboutUs/ " width="720" alt="About us picture"> {% endcomment %}
+        <img class="topImage" src="{% static 'images' %}/aboutUs/about-us-gamer-geeks.jpg" alt="alt-text">
         
+        <h1>Game Geeks Team</h1>
         <p>
             On this site you can see all the people that write and work on this great site
         </p>
@@ -27,13 +27,10 @@
         {% for aboutUs in allAboutUs %}
             <div class="mainContainer">
                 <h1 class="name">{{ aboutUs.Name }}</h1>
-                <small>
-                    {{ aboutUs.CDate }} 
-                </small><br><br>
                 
                 <div class="mainItem">
                     <div class="imageLeft">
-                        <img src="{% static 'images' %}/aboutUs/{{ aboutUs.ImagePath }}" width="150" alt="alt-text">
+                        <img class="mainImage" src="{% static 'images' %}/aboutUs/{{ aboutUs.ImagePath }}" width="150" alt="alt-text">
                     </div>
 
                     <div class="text">

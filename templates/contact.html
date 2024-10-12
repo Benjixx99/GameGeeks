@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
 
     <title>Contact</title>
 </head>
@@ -19,16 +19,11 @@
     
     <main class="contact_form">
         <form class="form">
-            <div class="pageTitle title">Contact Us</div>
-            <dvi class="secondaryTitle title">We'd love to hear from you!</div>
-            {% comment %} <label for="name">Name</label><br> {% endcomment %}
+            <h1 class="pageTitle title">Contact Us</h1>
+            <p class="secondaryTitle title">We'd love to hear from you!</p>
+            
             <input type="text" class="text formEntry" placeholder="Name"><br>
-
-            {% comment %} <label for="lname">E-mail</label><br> {% endcomment %}
             <input type="email" class="text formEntry" placeholder="Email"><br>
-
-
-            {% comment %} <label for="message">Message</label><br> {% endcomment %}
             <textarea class="message formEntry" placeholder="Message" style="height:100px"></textarea><br>
 
             <button class="submit formEntry" onclick="thanks()">Submit</button>

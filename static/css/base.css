@@ -1,15 +1,15 @@
 
 /* General section */
-body {
-    background-color: rgb(246, 243, 239);
-    color: blue;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 * {
 	margin:0;
 	padding:0;
 	box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(248, 246, 242);
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 ul {
@@ -18,36 +18,56 @@ ul {
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
 } 
+
+.main {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    color: black;
+}
+
+@media (max-width: 720px) {
+    .main { 
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
 /* General section END */
 
 
 /* Header and navigation section */
-.navigationList {
-    overflow: hidden;
-    background-color: #333;
+/* .header {
+    position: sticky;
+    top: 0;
+} */
+
+.logo {
+    display: inline-block;
+    width: 160px;
 }
 
-.navigationList li {
-    float: left;
+.navigation {
+    display: flex;
+    background-color: #24262b;
+}
+
+.navigationList {
+    overflow: hidden;
+    display: flex;
 }
 
 .navigationList li a {
-    display: block;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
+    background-color: #3337c8b3;
+    padding: 18px 16px;
+    display: block;
 }
 
 .navigationList li a:hover {
     background-color: #111;
-}
-  
-.navigationList a {
-    display: block;
-    padding: 8px;
-    background-color: #3337c8b3;
 }
 /* Header and navigation section END */
 
@@ -104,7 +124,6 @@ a {
 .footerColumn ul li a {
 	font-size: 16px;
 	text-transform: capitalize;
-	color: #ffffff;
 	text-decoration: none;
 	font-weight: 300;
 	color: #bbbbbb;
@@ -118,19 +137,22 @@ a {
 }
 
 .copyright {
+    font-size: 12px;
     text-align: center;
     padding-top: 25px;
     padding-bottom: 10px;
 }
 
-/*responsive*/
-@media(max-width: 767px){
+@media(max-width: 767px) {
+    
     .footerColumn {
         width: 50%;
         margin-bottom: 30px;
     }
 }
-@media(max-width: 574px){
+
+@media(max-width: 574px) {
+    
     .footerColumn {
         width: 100%;
     }

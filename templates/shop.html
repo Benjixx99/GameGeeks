@@ -17,14 +17,25 @@
 
     <!-- Main -->
     <main class="main">   
-        <div class="mainContainer">
+        <h1>Game Geeks Shop</h1>
+        <p>
+            We are a free game news site but as every project we need money.
+            That's the reason why we have a little shop with mearch. 
+        </p>
 
+        <div class="mainContainer">
             {% for item in shopArticle %}
                 <article class="mainItem">
                     <img src="{% static 'images' %}/shop/{{ item.ImagePath }}" width="210" height="240" alt="alt-text">
-                    <h3 class="name">{{ item.Name }}</a></h3>
                     
-                    <p class="price">$ {{ item.Price }}</p>
+                    <div class="maimTextSection">
+                        <p class="name">{{ item.Name }}</a></p>
+                        
+                        <div class="flexbox">
+                            <p class="price">$ {{ item.Price }}</p>
+                            <button class="btnToCart" onclick="alert('The cart is coming soon :)')" >Add to cart</button>
+                        </div>
+                    </div>
                 </article>
             {% endfor %}
         </div>

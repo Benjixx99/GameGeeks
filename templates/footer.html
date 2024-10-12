@@ -1,13 +1,15 @@
+{% load static %}
+
 <footer class="footer">
 
     <div class="row">
         <div class="footerColumn">
             <h3>GameGeeks</h3>
             <ul>
-                <li ><a href="{% url 'news' %}">News</a></li>
-                <li><a href="">Shop</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="{% url 'news' %}">News</a></li>
+                <li><a href="{% url 'shop' %}">Shop</a></li>
+                <li><a href="{% url 'about-us' %}">About Us</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
         </div>
 
@@ -15,19 +17,21 @@
             <h3>Follow us</h3>
             <ul>
                 <li><a href="">Facebook</a></li>
-                <li><a href="">X</li>
-                <li><a href="">Youtube</li>
+                <li><a href="">X</a></li>
+                <li><a href="">Youtube</a></li>
             </ul>
         </div>
 
         <div class="footerColumn">
             <h3>Legal</h3>
             <ul>
-                <li><a href="">Private Policy</a></li>
-                <li><a href="">Security</li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms & Conditions</a></li>
             </ul>
         </div>
     </div>
-    <p class="copyright">© Copyright 2024 GameGeeks. All rights reserved. </p>
+    <p class="copyright">© Copyright 2024 GameGeeks. All rights reserved.</p>
 
 </footer>
+
+<script src="{% static 'js' %}/main.js"></script>

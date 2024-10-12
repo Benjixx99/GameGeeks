@@ -18,12 +18,12 @@
     <!-- Main -->
     <main class="main">   
         <article class="mainContainer">
-            <h3>{{ news.Title }}</h3>
+            <h1 class="title">{{ news.Title }}</h1>
             <small>
                 {{ news.CDate }} {{ news.AuthorName }} 
             </small><br>
 
-            <img src="{% static 'images' %}/news/{{ news.ImagePath }}" width="720" alt="alt-text">
+            <img class="image" src="{% static 'images' %}/news/{{ news.ImagePath }}" alt="alt-text">
 
             <p class="text" style="white-space: pre-line">{{ news.Text }}</p><br>
         </article>
