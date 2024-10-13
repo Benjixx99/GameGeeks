@@ -1,0 +1,90 @@
+.topImage {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    margin-bottom: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.name {
+    font-size: 25px;
+    font-weight: bold;
+    color: darkmagenta;
+    border-bottom: 4px solid #181818;
+    margin-bottom: 5px;
+}
+
+.mainImage {
+    background-color: rgb(18, 7, 68);
+    padding: 10px;
+}
+
+.mainContainer {
+    margin-top: 20px;
+}
+
+.mainItem {
+    display: flex;
+    margin-top: 15px;
+}
+
+.main small {
+    font-size: 15px;
+    color:rgb(18, 7, 68);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.imageLeft {
+    background-color: rgba(15, 15, 15, 0.781);
+    margin-left: 10px;
+    padding: 15px;
+    width: 150px;
+}
+
+.text {
+    display: flex;
+    float: left;
+    background-color: rgb(241, 230, 226);
+    margin-left: 10px;
+    padding: 15px;
+}
+
+.description {
+    top: 0;
+    text-align: justify;
+    position: relative;
+    vertical-align: text-top;
+}
+
+@media (max-width: 720px) {
+    
+    .main {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: 20em) {
+
+	.imageLeft {
+		align-items: center;
+	}
+
+	.imageLeft img {
+		margin-right: 1em;
+	}
+
+	.imageLeft::after {
+        content: "";
+        clear: both;
+	}
+}
+
+@media (min-width: 30em) {
+
+	.imageLeft img {
+		flex-shrink: 0;
+	}
+}

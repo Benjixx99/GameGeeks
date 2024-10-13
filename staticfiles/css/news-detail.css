@@ -1,0 +1,25 @@
+.mainContainer {
+    padding-top: 10px;
+}
+
+.title {
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.mainContainer small {
+    padding-left: 10px;
+}
+
+.image {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.text {
+    padding-top: 10px;
+    padding-left: 10px;
+}

@@ -1,0 +1,52 @@
+.mainContainer {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    justify-items: center;
+}
+
+.mainItem {
+    width: 210px;
+    margin-top: 20px;
+}
+
+.maimTextSection {
+    height: 90px;
+}
+
+.mainItem small {
+    font-size: 15px;
+    color:rgb(18, 7, 68);
+}
+
+.name {
+    font-size: 12px;
+    font-weight: lighter;
+    height: 70px;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.btnToCart {
+    appearance: none;
+    background-color: #24262b;
+    color: white;
+    align-items: end;
+    padding: 5px 7px;
+    border-radius: 4px;
+    border-style: none;
+}
+
+.btnToCart:hover,
+.btnToCart:focus {
+    transition-duration: 0.1s; 
+    opacity: .75;
+}
