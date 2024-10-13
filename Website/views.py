@@ -29,8 +29,11 @@ def aboutUs(request):
 def contact(request):
     return render(request, "contact.html")
 
+def legalNotice(request):
+    return render(request, "legal-notice.html")
 
-
+def dataProtection(request):
+    return render(request, "data-protection.html")
 
 # TODO: Find a solution for this!
 def facebook(request):

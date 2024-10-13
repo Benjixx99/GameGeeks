@@ -1,15 +1,21 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+@font-face {
+    font-family: myVerdana;
+    src: url(../fonts/verdana.ttf);
+}
 
 /* General section */
 * {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
 body {
     background-color: rgb(248, 246, 242);
     font-size: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: myVerdana;
 }
 
 ul {
@@ -39,35 +45,92 @@ a {
 
 
 /* Header and navigation section */
-/* .header {
-    position: sticky;
-    top: 0;
-} */
-
 .logo {
-    display: inline-block;
+    float: left;
     width: 160px;
 }
 
 .navigation {
-    display: flex;
     background-color: #24262b;
+    height: 52px;
+    max-width: 1170px;
+    margin: auto;
+}
+  
+.navigationList {
+    float: right;
+    margin-right: 30px;
 }
 
-.navigationList {
-    overflow: hidden;
-    display: flex;
+nav ul li {
+    display: inline-block;
+    line-height: 52px;
 }
 
 .navigationList li a {
-    color: white;
-    background-color: #3337c8b3;
-    padding: 18px 16px;
     display: block;
+    color: white;
+    padding: 0 10px;
 }
 
+.navigationList li a.active,
 .navigationList li a:hover {
-    background-color: #111;
+    background-color: #293d63;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 22px;
+    color: white;
+    float: right;
+    line-height: 52px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .checkbtn {
+        display: block;
+    }
+
+    label.logo {
+        font-size: 22px;
+    }
+
+    .navigationList {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        background: #24262b;
+        top: 52px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .navigationList li {
+        display: block;
+        line-height: 20px;
+    }
+
+    .navigationList li a {
+        display: block;
+        padding: 25px 0;
+    }
+
+    .navigationList li a:hover,
+    .navigationList li a.active {
+        background-color: #293d63;
+    }
+
+    #check:checked~.navigationList {
+        left: 0;
+    }
 }
 /* Header and navigation section END */
 
@@ -78,7 +141,7 @@ a {
     max-width: 1170px;
 	margin: auto;
     padding: 50px 0;
-    color: rgb(6, 161, 245);
+    color: #bbbbbb;
     margin-top: 20px;
 }
 
@@ -110,8 +173,7 @@ a {
 	position: absolute;
 	left:0;
 	bottom: -10px;
-    /* #e91e63; */
-	background-color: rgb(6, 161, 245); 
+	background-color: #293d63; 
 	height: 2px;
 	box-sizing: border-box;
 	width: 50px;

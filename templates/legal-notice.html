@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    <title>Home</title>
+</head>
+<body>
+    <!-- Header -->
+    {% include "header.html" %}
+
+    <main class="main">
+        <h1>Legal Notice</h1>
+
+        <p class="text" style="white-space: pre-line">
+            Information provided pursuant to § 5 of the TMG (German Telemedia Act):
+            
+            Game Geeks
+            Dream street 1, 94102, San Francisco
+            
+            Contact details:
+            Tel: 0660 11223344
+            Email: offical@game-geeks.news
+            Register entry: No entry
+            Register court: No court
+            Register number: 9999
+            VAT: 12340000
+            VAT Registration Number pursuant to §27a of the German Value Added Tax Act
+
+            Responsible for the content pursuant to § 55 para. 2 of the RStV (German Interstate Broadcasting Treaty):
+            Game Geeks, Dream street 1, 94102, San Francisco
+ 
+            You can find our email address at the top of this Legal Notice. We are neither willing nor obligated to participate in a dispute settlement in front of a consumer arbitration board.
+        </p>
+    </main>
+
+    <!-- Footer -->
+    {% include "footer.html" %}
+</body>
+</html>

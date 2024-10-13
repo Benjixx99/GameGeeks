@@ -10,6 +10,7 @@ class News(models.Model):
     ShortText = models.CharField(max_length=5000)
     AuthorName = models.CharField(max_length=50)
     ImagePath = models.CharField(max_length=120)
+    AltImageText = models.CharField(max_length=50, default="")
 
     class Meta:
         verbose_name_plural = "News"
@@ -41,6 +42,7 @@ class ShopArticle(models.Model):
     Name = models.CharField(max_length=50)
     Text = models.TextField()
     ImagePath = models.CharField(max_length=120)
+    AltImageText = models.CharField(max_length=50, default="")
     Price = models.FloatField()
 
     class Meta:

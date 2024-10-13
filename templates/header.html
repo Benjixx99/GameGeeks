@@ -1,33 +1,20 @@
 {% load static %}
 
 <header class="header">
-    <nav class="navigation desktopNavigation">
+    <nav class="navigation">
         <img class="logo" src="{% static 'images' %}/logo/logo.png" alt="alt-text">
         
+        <input type="checkbox" id="check">
+
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+ 
         <ul class="navigationList">
             <li><a href="{% url 'news' %}">News</a></li>
             <li><a href="{% url 'shop' %}">Shop</a></li>
             <li><a href="{% url 'about-us' %}">About Us</a></li>
             <li><a href="{% url 'contact' %}">Contact</a></li>
-        </ul> 
+        </ul>
     </nav>
-
-    {% comment %} <nav class="mobileNavigation">
-        <button class="hamburger hamburger--spring" type="button">
-            <span class="hamburgerBox">
-              <span class="hamburgerInner"></span>
-            </span>
-        </button>
-    </nav> 
-
-    <aside class="mobileNavigationDrawer">
-        <nav>
-            <ul class="navigationList">
-                <li><a href="{% url 'news' %}">News</a></li>
-                <li><a href="{% url 'shop' %}">Shop</a></li>
-                <li><a href="{% url 'about-us' %}">About Us</a></li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
-            </ul> 
-        </nav> {% endcomment %}
-    </aside>
 </header>
