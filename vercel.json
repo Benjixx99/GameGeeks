@@ -5,8 +5,14 @@
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }],
 
-    "routes": [{
+    "routes": [
+        {
+        "src": "/static/(.*)",
+        "dest": "/sttic/$1"
+        },
+        {    
         "src": "/(.*)",
         "dest": "GameGeeks/wsgi.py"
-    }]
+        }
+    ]
 }
