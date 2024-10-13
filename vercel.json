@@ -1,18 +1,17 @@
 {
-    "builds": [{
-        "src": "GameGeeks/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
-
-    "routes": [
+    "builds": [
         {
-        "src": "/static/(.*)",
-        "dest": "/static/$1"
-        },
-        {    
-        "src": "/(.*)",
-        "dest": "GameGeeks/wsgi.py"
+          "src": "GameGeeks/wsgi.py",
+          "use": "@vercel/python",
+          "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
         }
-    ]
+      ],
+      "routes": [
+        {
+          "src": "/(.*)",
+          "dest": "GameGeeks/wsgi.py"
+        }
+      ],
+
+      "outputDirectory": "staticfiles"
 }
