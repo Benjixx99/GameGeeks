@@ -15,17 +15,17 @@ Used technologies:
 
 [Download](https://www.python.org/downloads/) Python and install it 
 
-Create a virtual envirment
+Create a virtual environment 
 ``` 
 virtualenv . 
 ```
 
-Activate the virtual environment
+Activate the virtual environment 
 ```
 .\Scripts\activate
 ```
 
-Clone this project into your virtual envirment
+Clone this project into your virtual environment 
 ```
 git clone https://github.com/Benjixx99/GameGeeks
 ```
