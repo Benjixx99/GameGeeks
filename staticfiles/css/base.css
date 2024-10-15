@@ -50,6 +50,15 @@ a {
     width: 160px;
 }
 
+.logoText {
+    float: left;
+    font-size: 22px;
+    color: white;
+    line-height: 52px;
+    margin-left: 15px;
+    
+}
+
 .navigation {
     background-color: #24262b;
     height: 52px;

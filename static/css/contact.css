@@ -80,3 +80,11 @@
     width: 300px;
     border-radius: 0%;
 }
+
+@media (max-width: 720px) {
+       
+    .main {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

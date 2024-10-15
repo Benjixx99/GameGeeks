@@ -59,32 +59,22 @@
 }
 
 @media (max-width: 720px) {
-    
+       
     .main {
         padding-left: 30px;
         padding-right: 30px;
     }
-}
 
-@media (min-width: 20em) {
+    .topImage {
+        padding: 0px;
+    }
 
-	.imageLeft {
-		align-items: center;
-	}
+    .mainItem {
+        display: inline-block;
+    }
 
-	.imageLeft img {
-		margin-right: 1em;
-	}
-
-	.imageLeft::after {
-        content: "";
-        clear: both;
-	}
-}
-
-@media (min-width: 30em) {
-
-	.imageLeft img {
-		flex-shrink: 0;
-	}
+    .imageLeft {
+        width: 180px;
+        margin-bottom: 15px;
+    }
 }

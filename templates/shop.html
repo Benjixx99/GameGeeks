@@ -26,7 +26,10 @@
         <div class="mainContainer">
             {% for item in shopArticle %}
                 <article class="mainItem">
-                    <img src="{% static 'images' %}/shop/{{ item.ImagePath }}" width="210" height="240" alt="{{ item.AltImageText }}">
+                    
+                    <div class="zoomImage">
+                        <img class="mainImage" src="{% static 'images' %}/shop/{{ item.ImagePath }}" width="210" height="240" alt="{{ item.AltImageText }}">
+                    </div>
                     
                     <div class="maimTextSection">
                         <p class="name">{{ item.Name }}</a></p>
